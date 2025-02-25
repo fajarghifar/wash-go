@@ -14,10 +14,10 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
+            $table->string('icon')->nullable();
             $table->unsignedBigInteger('price');
             $table->text('about')->nullable();
             $table->string('photo')->nullable();
-            $table->string('icon')->nullable();
             $table->unsignedBigInteger('duration_in_hour');
             $table->softDeletes();
             $table->timestamps();
